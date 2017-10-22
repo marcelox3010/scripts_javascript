@@ -6,7 +6,7 @@
 */
 
 
-function ValidaCPF(cpf){
+function validaCPF(cpf){
 
                     obj = cpf;
                     var i;

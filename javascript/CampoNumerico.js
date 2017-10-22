@@ -5,7 +5,7 @@
 
 */
 
-function soNumeros(v){
+function campoNumerico(v){
             
     v=v.replace(/\D/g,"");
     return v;
