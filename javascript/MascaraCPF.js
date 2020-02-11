@@ -4,7 +4,8 @@
     
     EXEMPLO DE COMO CHAMAR:
     <input type='text' name='cpf1' id='id_cpf1'  maxlength='14'
-            						onkeypress='javascript:this.value = mascaraCPF(this.value)'>
+            						onkeypress='javascript:this.value = mascaraCPF(this.value)'
+                                    onkeyup='javascript:this.value = mascaraCPF(this.value)'>
 
 */
 
