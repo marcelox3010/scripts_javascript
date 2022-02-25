@@ -108,7 +108,7 @@ function validaCPF(cpf){
 
 }
 
-function valida_cnpj(cnpj){
+function validaCNPJ(cnpj){
 
     var numeros, digitos, soma, i, resultado, pos, tamanho, digitos_iguais;
 
