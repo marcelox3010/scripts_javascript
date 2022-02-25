@@ -59,21 +59,20 @@ function mascaraTelefone(v){
 
 }
 
-function validaEmail(email){
+function validaEmail(v){
 
-    strMail = email;
+    strMail = v;
     re = /^[^@]+@[^@]+.[a-z]{2,}$/i;
     if(strMail.search(re) == -1) return false;
     return true;
 
 }
 
-function validaCPF(cpf){
+function validaCPF(v){
 
-    obj = cpf;
     var i;
     exp = /\.|\-/g;
-    s = obj.value.replace( exp, "" );
+    s = v.replace(exp, "");
 
     if (s == "00000000000" || 
         s == "11111111111" || 
@@ -108,21 +107,26 @@ function validaCPF(cpf){
 
 }
 
-function validaCNPJ(cnpj){
+function validaCNPJ(v){
 
     var numeros, digitos, soma, i, resultado, pos, tamanho, digitos_iguais;
 
-    cnpj = document.getElementById('cnpj').value;
+    cnpj = v;
     exp = /\D/g;
-    cnpj = cnpj.replace( exp, "" );
-    digitos_iguais = 1;
+    cnpj = cnpj.replace(exp, "");
+    
     if (cnpj.length < 14 && cnpj.length < 15) return false;
 
-    for (i = 0; i < cnpj.length - 1; i++)
-    if (cnpj.charAt(i) != cnpj.charAt(i + 1))
-    {
-        digitos_iguais = 0;
-        break;
+    digitos_iguais = 1;
+    for (i = 0; i < cnpj.length - 1; i++){
+
+        if (cnpj.charAt(i) != cnpj.charAt(i + 1)){
+            
+            digitos_iguais = 0;
+            break;
+
+        }
+
     }
     if (!digitos_iguais){
 
