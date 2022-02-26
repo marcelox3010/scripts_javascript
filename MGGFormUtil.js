@@ -34,8 +34,7 @@ function mascaraCPF(v){
 
 }
 
-function mascaraDinheiro(v)
-{
+function mascaraDinheiro(v){
 
     v=v.replace(/\D/g,"");
     v=v.replace(/^(0)(0)/g,"$2");
@@ -128,7 +127,6 @@ function validaCNPJ(v){
         }
 
     }
-
     if(digitos_iguais) return false; 
 
     tamanho = cnpj.length - 2
@@ -136,11 +134,12 @@ function validaCNPJ(v){
     digitos = cnpj.substring(tamanho);
     soma = 0;
     pos = tamanho - 7;
-    for (i = tamanho; i >= 1; i--)
-    {
+    for (i = tamanho; i >= 1; i--){
+
         soma += numeros.charAt(tamanho - i) * pos--;
         if (pos < 2)
             pos = 9;
+            
     }
 
     resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
