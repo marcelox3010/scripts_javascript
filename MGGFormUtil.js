@@ -1,11 +1,11 @@
-function campoNumerico(v){
+function campoNumericoMGG(v){
 
     v=v.replace(/\D/g,"");
     return v;
 
 }
 
-function mascaraCEP(v){
+function mascaraCEPMGG(v){
 
     v=v.replace(/\D/g,"");
     v=v.replace(/^(\d{5})(\d)/,"$1-$2");
@@ -13,7 +13,7 @@ function mascaraCEP(v){
 
 }
 
-function mascaraCNPJ(v){
+function mascaraCNPJMGG(v){
 
     v=v.replace(/\D/g,"");
     v=v.replace(/^(\d{2})(\d)/,"$1.$2");
@@ -24,7 +24,7 @@ function mascaraCNPJ(v){
 
 }
 
-function mascaraCPF(v){
+function mascaraCPFMGG(v){
 
     v=v.replace(/\D/g,"");
     v=v.replace(/(\d{3})(\d)/,"$1.$2");
@@ -34,7 +34,7 @@ function mascaraCPF(v){
 
 }
 
-function mascaraDinheiro(v){
+function mascaraDinheiroMGG(v){
 
     v=v.replace(/\D/g,"");
     v=v.replace(/^(0)(0)/g,"$2");
@@ -49,7 +49,7 @@ function mascaraDinheiro(v){
 	
 }
 
-function mascaraTelefone(v){
+function mascaraTelefoneMGG(v){
  
     v=v.replace(/\D/g,"");
     v=v.replace(/^(\d{2})(\d)/g,"($1) $2");
@@ -58,7 +58,7 @@ function mascaraTelefone(v){
 
 }
 
-function validaEmail(v){
+function validaEmailMGG(v){
 
     strMail = v;
     re = /^[^@]+@[^@]+.[a-z]{2,}$/i;
@@ -67,7 +67,7 @@ function validaEmail(v){
 
 }
 
-function validaCPF(v){
+function validaCPFMGG(v){
 
     var i;
     exp = /\.|\-/g;
@@ -106,7 +106,7 @@ function validaCPF(v){
 
 }
 
-function validaCNPJ(v){
+function validaCNPJMGG(v){
 
     var numeros, digitos, soma, i, resultado, pos, tamanho, digitos_iguais;
 
