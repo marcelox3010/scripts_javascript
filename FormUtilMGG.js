@@ -67,6 +67,14 @@ function validaEmailMGG(v){
 
 }
 
+function validaCEPMGG(cep){
+
+    //SÃO 8 CARACTERES MAIS "-"  XXXXX-XXX 
+    if(cep.length == 9) return true;
+    return false;
+
+}
+
 function validaCPFMGG(v){
 
     var i;
